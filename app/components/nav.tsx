@@ -8,7 +8,7 @@ const navItems = {
     name: 'blog',
   },
   'https://bit.ly/PortofolioFury': {
-    name: 'Past Portfolio',
+    name: 'product portfolio',
   },
 }
 
