@@ -1,7 +1,4 @@
-'use client';
-
 import Link from 'next/link'
-import { useState, useEffect } from 'react'
 
 const navItems = {
   '/': {
@@ -16,20 +13,6 @@ const navItems = {
 }
 
 export function Navbar() {
-  const [darkMode, setDarkMode] = useState(false)
-
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add('dark')
-    } else {
-      document.documentElement.classList.remove('dark')
-    }
-  }, [darkMode])
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode)
-  }
-
   return (
     <aside className="-ml-[8px] mb-16 tracking-tight">
       <div className="lg:sticky lg:top-20">
@@ -43,18 +26,12 @@ export function Navbar() {
                 <Link
                   key={path}
                   href={path}
-                  className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-2 m-1"
+                  className="transition-all hover:text-neutral-800 flex align-middle relative py-1 px-2 m-1"
                 >
                   {name}
                 </Link>
               )
             })}
-            <button
-              onClick={toggleDarkMode}
-              className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-2 m-1"
-            >
-              {darkMode ? '☀️' : '🌙'}
-            </button>
           </div>
         </nav>
       </div>
