@@ -24,21 +24,10 @@ export default function Footer() {
             className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
             rel="noopener noreferrer"
             target="_blank"
-            href="/rss"
-          >
-            <ArrowIcon />
-            <p className="ml-2 h-7">rss</p>
-          </a>
-        </li>
-        <li>
-          <a
-            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
-            rel="noopener noreferrer"
-            target="_blank"
             href="https://x.com/furyoktria"
           >
             <ArrowIcon />
-            <p className="ml-2 h-7">Fury: Twitter</p>
+            <p className="ml-2 h-7">Fury-Twitter</p>
           </a>
         </li>
         <li>
@@ -49,7 +38,7 @@ export default function Footer() {
             href="https://www.linkedin.com/in/furyoktria/"
           >
             <ArrowIcon />
-            <p className="ml-2 h-7">Fury: LinkedIn</p>
+            <p className="ml-2 h-7">Fury-LinkedIn</p>
           </a>
         </li>
       </ul>

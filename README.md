@@ -11,7 +11,6 @@ This is a porfolio site template complete with a blog. Includes:
 - Vercel Speed Insights / Web Analytics
 - Geist font
 
-Aji ganteng
 
 ## Demo
 
