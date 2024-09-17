@@ -39,7 +39,7 @@ export default function Page() {
           <li className="flex items-start">
             <span className="mr-2">5️⃣</span>
             <div>
-              <strong>GOTOKO (Unilever and GOTO JV):</strong> Senior Product Manager overseeing core product ecosystem, aligning processes in SKU, Pricing, Inventory, and Marketing Management.
+              <strong>GOTOKO (Unilever and GOTO Joint Venture):</strong> Senior Product Manager overseeing core product ecosystem, aligning processes in SKU, Pricing, Inventory, and Marketing Management.
             </div>
           </li>
         </ul>
