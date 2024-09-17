@@ -4,7 +4,7 @@ export default function Page() {
   return (
     <section>
       <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
-        Fury Oktria Putra Portfolio
+        Fury Oktria Putra - Portfolio
       </h1>
       <div className="mb-8">
         <p className="mb-4">
@@ -27,13 +27,13 @@ export default function Page() {
           <li className="flex items-start">
             <span className="mr-2">3️⃣</span>
             <div>
-              <strong>Payfazz (Fazz Agen):</strong> Improved financial services for warungs, reducing subsidy costs by billions of rupiahs and extending runway.
+              <strong>Payfazz (Currently, Fazz Agen):</strong> Improved financial services for warungs, reducing subsidy costs by billions of rupiahs and extending runway.
             </div>
           </li>
           <li className="flex items-start">
             <span className="mr-2">4️⃣</span>
             <div>
-              <strong>Independent Contractor:</strong> Provided financial services consultancy to Finnet and Jamkrindo, focusing on AI implementation and business process optimization.
+              <strong>Independent Contractor & Consultant:</strong> Provided financial services consultancy to Finnet and Jamkrindo, focusing on AI implementation and business process optimization.
             </div>
           </li>
           <li className="flex items-start">
