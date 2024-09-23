@@ -10,6 +10,9 @@ const navItems = {
   'https://bit.ly/PortofolioFury': {
     name: 'product portfolio',
   },
+  '/expertise': {
+    name: 'expertise',
+  },
 }
 
 export function Navbar() {
