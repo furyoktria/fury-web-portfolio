@@ -4,14 +4,14 @@ const navItems = {
   '/': {
     name: 'home',
   },
-  '/blog': {
-    name: 'blog',
-  },
-  'https://bit.ly/PortofolioFury': {
-    name: 'product portfolio',
-  },
   '/expertise': {
     name: 'expertise',
+  },
+  'https://bit.ly/PortofolioFury': {
+    name: 'portfolio',
+  },
+  '/blog': {
+    name: 'blog',
   },
 }
 
