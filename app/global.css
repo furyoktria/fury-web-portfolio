@@ -1,7 +1,47 @@
 @import 'tailwindcss';
 
+/* ============================================
+   TBD-Taikisha Design System
+   Brand Colors & CSS Custom Properties
+   ============================================ */
+
+:root {
+  /* Primary — Taikisha Red */
+  --taikisha-red: #D32F2F;
+  --taikisha-red-dark: #B71C1C;
+  --taikisha-red-light: #EF5350;
+  --taikisha-red-50: #FFEBEE;
+  --taikisha-red-100: #FFCDD2;
+
+  /* Secondary — Taikisha Blue */
+  --taikisha-blue: #1565C0;
+  --taikisha-blue-dark: #0D47A1;
+  --taikisha-blue-light: #42A5F5;
+
+  /* Neutrals */
+  --taikisha-dark: #0a0a0a;
+  --taikisha-gray-900: #171717;
+  --taikisha-gray-800: #262626;
+  --taikisha-gray-700: #404040;
+  --taikisha-gray-600: #525252;
+  --taikisha-gray-500: #737373;
+  --taikisha-gray-400: #a3a3a3;
+  --taikisha-gray-300: #d4d4d4;
+  --taikisha-gray-200: #e5e5e5;
+  --taikisha-gray-100: #f5f5f5;
+  --taikisha-gray-50: #fafafa;
+
+  /* Accent — Green for sustainability */
+  --taikisha-green: #2E7D32;
+  --taikisha-green-light: #4CAF50;
+}
+
+/* ============================================
+   Base Styles
+   ============================================ */
+
 ::selection {
-  background-color: #2563eb;
+  background-color: var(--taikisha-red);
   color: #fefefe;
 }
 
@@ -22,4 +62,218 @@ input[type='email'] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+/* ============================================
+   Animations & Transitions
+   ============================================ */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.7s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.7s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.7s ease-out forwards;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Staggered delays */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-600 { animation-delay: 600ms; }
+
+/* ============================================
+   Component Styles
+   ============================================ */
+
+/* Card hover effect */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+@media (prefers-color-scheme: dark) {
+  .card-hover:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* Red accent line */
+.red-accent-top {
+  border-top: 3px solid var(--taikisha-red);
+}
+
+.red-accent-bottom {
+  border-bottom: 3px solid var(--taikisha-red);
+}
+
+/* Hero gradient backgrounds */
+.hero-gradient {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 30%, #0f3460 60%, #1a1a2e 100%);
+}
+
+.hero-gradient-red {
+  background: linear-gradient(135deg, var(--taikisha-red-dark) 0%, var(--taikisha-red) 50%, #e53935 100%);
+}
+
+/* Grid pattern overlay */
+.grid-pattern {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Dot pattern overlay */
+.dot-pattern {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, var(--taikisha-red) 0%, var(--taikisha-red-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: var(--taikisha-red);
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background-color: var(--taikisha-red-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(211, 47, 47, 0.3);
+}
+
+.btn-secondary {
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Section divider */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--taikisha-gray-300),
+    transparent
+  );
+}
+
+@media (prefers-color-scheme: dark) {
+  .section-divider {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      var(--taikisha-gray-700),
+      transparent
+    );
+  }
+}
+
+/* Focus states for accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--taikisha-red);
+  outline-offset: 2px;
+  border-radius: 2px;
 }

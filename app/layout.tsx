@@ -9,17 +9,17 @@ import { baseUrl } from './sitemap'
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'TBD-Taikisha | Engineering Excellence',
-    template: '%s | TBD-Taikisha',
+    default: 'TBD-Taikisha Indonesia | Engineering Excellence',
+    template: '%s | TBD-Taikisha Indonesia',
   },
   description:
-    'TBD-Taikisha — Delivering world-class engineering solutions for environmental systems, paint finishing, and industrial infrastructure.',
+    'TBD-Taikisha Indonesia — World-class engineering solutions for environmental systems, paint finishing, and industrial infrastructure. Part of Taikisha Group with 110+ years of heritage.',
   openGraph: {
-    title: 'TBD-Taikisha',
+    title: 'TBD-Taikisha Indonesia',
     description:
-      'Delivering world-class engineering solutions for environmental systems, paint finishing, and industrial infrastructure.',
+      'World-class engineering solutions for environmental systems, paint finishing, and industrial infrastructure.',
     url: baseUrl,
-    siteName: 'TBD-Taikisha',
+    siteName: 'TBD-Taikisha Indonesia',
     locale: 'en_US',
     type: 'website',
   },
