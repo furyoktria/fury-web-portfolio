@@ -3,23 +3,23 @@ import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import { Navbar } from './components/nav'
-import { Analytics } from '@vercel/analytics/react'
-import { SpeedInsights } from '@vercel/speed-insights/next'
 import Footer from './components/footer'
 import { baseUrl } from './sitemap'
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'Fury Portfolio',
-    template: '%s | Fury Portfolio',
+    default: 'TBD-Taikisha | Engineering Excellence',
+    template: '%s | TBD-Taikisha',
   },
-  description: 'This is my portfolio.',
+  description:
+    'TBD-Taikisha — Delivering world-class engineering solutions for environmental systems, paint finishing, and industrial infrastructure.',
   openGraph: {
-    title: 'My Portfolio',
-    description: 'This is my portfolio.',
+    title: 'TBD-Taikisha',
+    description:
+      'Delivering world-class engineering solutions for environmental systems, paint finishing, and industrial infrastructure.',
     url: baseUrl,
-    siteName: 'My Portfolio',
+    siteName: 'TBD-Taikisha',
     locale: 'en_US',
     type: 'website',
   },
@@ -47,19 +47,15 @@ export default function RootLayout({
     <html
       lang="en"
       className={cx(
-        'text-black bg-white dark:text-white dark:bg-black',
+        'text-black bg-white dark:text-white dark:bg-[#0a0a0a]',
         GeistSans.variable,
         GeistMono.variable
       )}
     >
-      <body className="antialiased max-w-xl mx-4 mt-8 lg:mx-auto">
-        <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
-          <Navbar />
-          {children}
-          <Footer />
-          <Analytics />
-          <SpeedInsights />
-        </main>
+      <body className="antialiased">
+        <Navbar />
+        <main className="min-h-screen">{children}</main>
+        <Footer />
       </body>
     </html>
   )
